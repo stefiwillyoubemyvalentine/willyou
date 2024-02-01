@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <Title>Valentine</Title>
+        <link rel="stylesheet" href="valentine.css">
+        <link rel="stylesheet" href="fireworks.css">
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+    </head>
+
+    <body id="myBody">
+        <div id="mainContainer">
+        </div>
+
+        <div id="myModal">
+            <div>
+                <h1 id="nameHeading">Stefani</h1>
+                <h1 id="descHeading">Will you be my valentine?</h1>
+            </div>
+            <div style="display: flex; gap: 5vw">
+                <div class="myButton" onclick="handleYes()">
+                    Yes!
+                </div>
+                <div class="myButton" id="noButton" onclick="moveNo()">
+                    No!
+                </div>
+            </div>
+        </div>
+
+        <div class="pyro" id="pyro" style="display: none; position: absolute; left: 0px; top: 0px; height: 100vh; width: 100vw; background-color: black; opacity: 70%;">
+            <div class="before"></div>
+            <div class="after"></div>
+        </div>
+
+        <script src="valentine.js"></script>
+    </body>
+</html>

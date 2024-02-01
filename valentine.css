@@ -1,0 +1,79 @@
+#myBody {
+    /* background-image: url("https://www.shutterstock.com/image-photo/couple-happy-kittens-sleep-together-600nw-2237607353.jpg"), 
+                        url("https://i.ibb.co/RPJTTX5/Screenshot-2024-02-01-022121.png"); */
+    background-image: linear-gradient(to top, #dc8dc9 0%, #dc8dc9 1%, #fdcbf1 100%);
+    margin: 2vw;
+    overflow: hidden;
+    font-family: 'Brush Script MT', cursive;
+    color: #a2428d;
+}
+
+#mainContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2vw;
+}
+
+#myModal {
+    position: absolute;
+    width: 40vw;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10vh;
+    font-size: 2vw;
+    gap: 3vh;
+    animation: tilt-n-move-shaking 3s infinite;
+}
+
+.myButton {
+    font-family: "Trebuchet MS";
+    font-weight: bold;
+    width: 4vw;
+    padding: 2vh;
+    padding-inline: 4vw;
+    color: white;
+    background-color: #8d2e11 ;
+    border-radius: 10vh;
+    cursor: pointer;
+    font-size: 2vw;
+}
+
+@media screen and (max-width: 600px) {
+    #myModal {
+        width: 60vw;
+        font-size: 5vw;
+    }
+
+    .myButton {
+        font-size: 5vw;
+        width: 10vw;
+    }
+}
+
+@keyframes tilt-n-move-shaking {
+    0% { top: 45%; left: 55%; transform: rotate(0deg) translate(-50%, -50%); }
+    25% { top: 55%; left: 55%; transform: rotate(5deg) translate(-50%, -50%); }
+    50% { top: 55%; left: 45%; transform: rotate(0eg) translate(-50%, -50%); }
+    75% { top: 45%; left: 45%; transform: rotate(-5deg) translate(-50%, -50%); }
+    100% { top: 45%; left: 55%; transform: rotate(0deg) translate(-50%, -50%); }
+}
+
+h1 {
+    margin: 0;
+}
+
+#noButton {
+    transition: 1s;
+}
