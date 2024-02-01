@@ -53,4 +53,24 @@ const handleYes = () => {
     const pyro = document.getElementById("pyro");
     pyro.style.display = "block";
     document.getElementById("descHeading").innerHTML = "WOOOOOOOOOO TOOOOOOOOO!!!"
+    setInterval(createHeart, 300);
 }
+
+function createHeart() {
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    
+    heart.style.position = "absolute"
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.top = "0px";
+    heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+    
+    heart.innerText = '<3';
+    heart.style.fontSize = "10vh"
+    
+    document.body.appendChild(heart);
+    
+    setTimeout(() => {
+                heart.remove();
+                }, 10000);
+  }
